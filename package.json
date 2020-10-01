@@ -1,0 +1,75 @@
+{
+  "name": "domino-service-server",
+  "version": "1.0.0",
+  "description": "Server for the DOMINO service. Based on Nest.js",
+  "main": "web-server.js",
+  "scripts": {
+    "web": "cross-env NODE_ENV=development ts-node src\\web\\web.main.ts",
+    "unit": "cross-env NODE_ENV=development ts-node src\\unit\\unit.master.ts",
+    "test": "jest",
+    "test:cov": "jest --coverage",
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "ideas": "cross-env NODE_ENV=development ts-node temp//ideas//uuid.ts"
+  },
+  "author": "Aleksey Khachaturov <lug4rd@protonmail.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@nestjs/common": "^5.3.7",
+    "@nestjs/core": "^5.3.7",
+    "bee-queue": "^1.2.2",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^6.0.0",
+    "express-cluster": "0.0.5",
+    "helmet": "^3.13.0",
+    "isemail": "^3.2.0",
+    "joi": "^13.4.0",
+    "jsonwebtoken": "^8.3.0",
+    "lodash": "^4.17.11",
+    "lured": "^1.0.2",
+    "moment": "^2.22.2",
+    "moment-timezone": "^0.5.21",
+    "mongodb": "^3.1.6",
+    "promise-callbacks": "^3.1.0",
+    "rand-token": "^0.4.0",
+    "redis": "^2.8.0",
+    "reflect-metadata": "^0.1.12",
+    "rxjs": "^6.3.2",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "@nestjs/testing": "^5.3.7",
+    "@types/cookie-parser": "^1.4.1",
+    "@types/dotenv": "^4.0.3",
+    "@types/es6-shim": "^0.31.37",
+    "@types/express": "^4.0.39",
+    "@types/express-cluster": "0.0.0",
+    "@types/helmet": "0.0.38",
+    "@types/jest": "^21.1.8",
+    "@types/joi": "^13.4.5",
+    "@types/jsonwebtoken": "^7.2.8",
+    "@types/lodash": "^4.14.112",
+    "@types/moment-timezone": "^0.5.9",
+    "@types/mongodb": "^3.1.7",
+    "@types/node": "^9.6.31",
+    "@types/redis": "^2.8.6",
+    "@types/uuid": "^3.4.4",
+    "cross-env": "^5.2.0",
+    "ts-node": "^7.0.0",
+    "tslint": "^5.11.0",
+    "typescript": "^2.9.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage"
+  }
+}
