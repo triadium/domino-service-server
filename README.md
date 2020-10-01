@@ -25,11 +25,6 @@ $ npm install
 
 ```bash
 # development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-npm run start:prod
+$ npm run web
+$ npm run unit
 ```
